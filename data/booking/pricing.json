@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "description": "Backend pricing configuration for the booking quote. Deterministic: total = Σ per truck (fuel + vehicle distance cost + vehicle time cost + tolls) × (1 + margin), rounded up to whole euros, never below the minimum charge per truck. EDITABLE SEED DATA. Driver expenses (wages, per diem, accommodation, any other driver cost) are deliberately excluded and must not be added here.",
+  "seedData": true,
+  "marginPct": 12,
+  "emptyReturnFactor": 0.5,
+  "emptyReturnNote": "Share of the loaded distance driven back empty. 0.5 assumes half of the return trip is covered by a back-haul — HaulPair's aim of fewer empty runs.",
+  "handlingHoursPerTruck": 1.5,
+  "handlingNote": "Time the truck spends at loading and unloading, priced at the vehicle time cost only.",
+  "minimumChargeEurPerTruck": 90,
+  "demoRoute": { "roadFactor": 1.25, "averageSpeedKmh": 62 },
+  "quoteTtlMinutes": 30
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "description": "Trailer catalog, modelled separately from tractors. Cargo payload is NOT the 40 t combination mass: it depends on tractor and trailer unladen mass, axle configuration, registration and legal limits. Null means not verified — do not substitute guesses.",
+  "trailerCategories": {
+    "curtainsider": { "lt": "Tentinė puspriekabė", "en": "Curtainsider" },
+    "agricultural_tipper": { "lt": "Žemės ūkio savivartė puspriekabė", "en": "Agricultural tipper" },
+    "refrigerated": { "lt": "Šaldytuvas (refrižeratorius)", "en": "Refrigerated trailer" },
+    "flatbed": { "lt": "Platforma", "en": "Flatbed" }
+  },
+  "demoPayloadProfile": {
+    "maxPayloadKg": 24000,
+    "confidence": "demo_assumption",
+    "note": "Demonstration profile used only when no verified vehicle configuration is available. Not a universal truck specification."
+  },
+  "legalReference": {
+    "title": "Directive 96/53/EC, Annex I (consolidated)",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A01996L0053-20190814",
+    "confidence": "official_source_search_extract",
+    "maxWidthM": 2.55,
+    "maxWidthConditionedM": 2.60,
+    "maxHeightM": 4.00,
+    "maxArticulatedLengthM": 16.50,
+    "maxDrivingAxleKg": 11500,
+    "maxCombinationMass5AxleKg": 40000,
+    "note": "General EU maxima for international traffic; national rules and exceptions apply. The 40 t figure was seen in an extract and should be confirmed in the consolidated text."
+  },
+  "trailers": [
+    {
+      "id": "schmitz_ski_light_agri",
+      "category": "agricultural_tipper",
+      "manufacturer": "Schmitz Cargobull",
+      "model": "S.KI LIGHT (agriculture)",
+      "axles": 3,
+      "maxPayloadKg": null,
+      "unladenWeightKg": null,
+      "internalVolumeM3": null,
+      "volumeRangeM3": { "min": 38, "max": 59 },
+      "palletCapacity": null,
+      "palletsApplicable": false,
+      "internalDimensions": null,
+      "configurationOptions": { "systemLengthsM": [8.2, 9.6, 10.5], "bodyDepthMm": { "min": 1900, "max": 2300 } },
+      "temperatureControl": { "available": false, "minC": null, "maxC": null },
+      "undividedBody": true,
+      "supportedPackaging": ["bulk"],
+      "permittedCargoCategories": ["grain_oilseed", "vegetable"],
+      "dataConfidence": "official_source_search_extract",
+      "notes": "Exact volume depends on configuration (38–59 m³). Unladen weight 'from 4.8 t' is stated for the S.KI LIGHT range in general, not this agricultural version, so it is not recorded. Payload and permissible total weight not found.",
+      "sources": [
+        { "title": "Schmitz Cargobull S.KI LIGHT – agriculture", "url": "https://www.cargobull.com/en/use/agriculture-s-ki-light", "accessNote": "Search-engine extract only." },
+        { "title": "Schmitz Cargobull S.KI tipper brochure", "url": "https://www.cargobull.com/en/-/media/project/scb-sites/scb-global-site/media-center-en/brochure-ski-tipper-semi-trailer.pdf", "accessNote": "Search-engine extract only." }
+      ]
+    },
+    {
+      "id": "schmitz_sko_cool_smart_13_4",
+      "category": "refrigerated",
+      "manufacturer": "Schmitz Cargobull",
+      "model": "S.KO COOL SMART (13.4 m internal length)",
+      "axles": null,
+      "maxPayloadKg": null,
+      "unladenWeightKg": null,
+      "internalVolumeM3": null,
+      "volumeRangeM3": null,
+      "palletCapacity": { "euroPallets": 33, "isoPallets": null },
+      "palletsApplicable": true,
+      "internalDimensions": { "lengthMm": 13400, "widthMm": { "options": [2460, 2490] }, "heightMm": { "min": 2350, "max": 3050 } },
+      "configurationOptions": { "internalLengthsM": [13.4, 14.7, 16.8], "euroPalletsByLength": { "13.4": 33, "14.7": 36, "16.8": 41 } },
+      "temperatureControl": { "available": true, "minC": null, "maxC": null, "note": "Temperature range depends on the refrigeration unit fitted; not recorded." },
+      "undividedBody": true,
+      "supportedPackaging": ["palletized", "boxed", "bagged"],
+      "permittedCargoCategories": ["vegetable", "other_agricultural"],
+      "dataConfidence": "official_source_search_extract",
+      "notes": "Internal volume has no official figure in the sources found (dealer listings show about 87–90 m³; not recorded).",
+      "sources": [
+        { "title": "Schmitz Cargobull S.KO COOL SMART", "url": "https://www.cargobull.com/en/products/box-body/box-semi-trailer/s-ko-cool-smart", "accessNote": "Provided by the project team; figures from search-engine extracts of cargobull.com." }
+      ]
+    },
+    {
+      "id": "schmitz_scs_universal_13_62",
+      "category": "curtainsider",
+      "manufacturer": "Schmitz Cargobull",
+      "model": "S.CS UNIVERSAL (13.62 m internal length)",
+      "axles": null,
+      "maxPayloadKg": null,
+      "unladenWeightKg": null,
+      "internalVolumeM3": null,
+      "volumeRangeM3": null,
+      "palletCapacity": { "euroPallets": 34, "isoPallets": 26 },
+      "palletsApplicable": true,
+      "internalDimensions": { "lengthMm": 13620, "widthMm": 2480, "heightMm": { "min": null, "max": 3050 } },
+      "configurationOptions": { "internalLengthsM": [13.62, 15.0], "euroPalletsByLength": { "13.62": 34 } },
+      "temperatureControl": { "available": false, "minC": null, "maxC": null },
+      "undividedBody": true,
+      "supportedPackaging": ["palletized", "bagged", "boxed", "baled", "other_specialized"],
+      "permittedCargoCategories": ["grain_oilseed", "vegetable", "other_agricultural"],
+      "dataConfidence": "official_source_search_extract",
+      "notes": "34 (not 33) Euro pallets for the 13.62 m version per the manufacturer page extract. Volume not recorded (no official figure found).",
+      "sources": [
+        { "title": "Schmitz Cargobull S.CS UNIVERSAL", "url": "https://www.cargobull.com/en/products/curtainsider/curtainsider-semi-trailer/s-cs-universal", "accessNote": "Search-engine extract only." }
+      ]
+    },
+    {
+      "id": "generic_flatbed",
+      "category": "flatbed",
+      "manufacturer": null,
+      "model": "Generic flatbed semitrailer (placeholder)",
+      "axles": null,
+      "maxPayloadKg": null,
+      "unladenWeightKg": null,
+      "internalVolumeM3": null,
+      "volumeRangeM3": null,
+      "palletCapacity": null,
+      "palletsApplicable": true,
+      "internalDimensions": null,
+      "configurationOptions": null,
+      "temperatureControl": { "available": false, "minC": null, "maxC": null },
+      "undividedBody": true,
+      "supportedPackaging": ["palletized", "baled", "other_specialized", "boxed"],
+      "permittedCargoCategories": ["other_agricultural"],
+      "dataConfidence": "unknown",
+      "notes": "No specific model selected yet. All capacities unknown; supply a configuration override.",
+      "sources": []
+    }
+  ]
+}

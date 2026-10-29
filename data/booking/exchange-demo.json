@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "description": "DEMO freight exchange (Krovinių birža) data: fictional cargo offers and available trucks for a read-only demo page. No matching logic. Names marked (demo) are invented.",
+  "demo": true,
+  "updatedAt": "2026-10-26T09:00:00+03:00",
+  "cargoOffers": [
+    { "id": "co-1", "shipper": "Piemuo (demo)", "cargoType": "wheat", "amountT": 24, "from": "Kėdainiai", "to": "Klaipėda", "date": "2026-11-03", "note": "Sausi kviečiai, pakrovimas iš sandėlio" },
+    { "id": "co-2", "shipper": "Ūkis „Rasa“ (demo)", "cargoType": "rapeseed", "amountT": 18, "from": "Joniškis", "to": "Klaipėda", "date": "2026-11-05", "note": "Rapsai, galima dalinti į 2 reisus" },
+    { "id": "co-3", "shipper": "Ūkis „Laukas“ (demo)", "cargoType": "barley", "amountT": 12, "from": "Pasvalys", "to": "Šiauliai", "date": "2026-11-04", "note": "" },
+    { "id": "co-4", "shipper": "Ūkis „Vėjas“ (demo)", "cargoType": "potatoes", "amountT": 8, "from": "Utena", "to": "Vilnius", "date": "2026-11-06", "note": "Bulvės didmaišiuose" },
+    { "id": "co-5", "shipper": "Ūkis „Aruodas“ (demo)", "cargoType": "fertiliser", "amountT": 20, "from": "Klaipėda", "to": "Radviliškis", "date": "2026-11-10", "note": "Granuliuotos trąšos" }
+  ],
+  "trucks": [
+    { "id": "tr-1", "carrier": "Linas Agro (demo)", "truckType": "combination_40t", "plate": "DEM 401", "base": "Panevėžys", "heading": "Klaipėda", "freeFrom": "2026-11-03", "freeCapacityT": 26 },
+    { "id": "tr-2", "carrier": "Linas Agro (demo)", "truckType": "grain_24t", "plate": "DEM 301", "base": "Kėdainiai", "heading": "Kaunas", "freeFrom": "2026-11-02", "freeCapacityT": 15 },
+    { "id": "tr-3", "carrier": "Vežėjas „Kelias“ (demo)", "truckType": "rigid_14t", "plate": "DEM 201", "base": "Šiauliai", "heading": "Joniškis", "freeFrom": "2026-11-04", "freeCapacityT": 7 },
+    { "id": "tr-4", "carrier": "Vežėjas „Ratas“ (demo)", "truckType": "combination_40t", "plate": "DEM 402", "base": "Klaipėda", "heading": "Kėdainiai", "freeFrom": "2026-11-05", "freeCapacityT": 26 },
+    { "id": "tr-5", "carrier": "Vežėjas „Kelias“ (demo)", "truckType": "small_tipper", "plate": "DEM 101", "base": "Utena", "heading": "Vilnius", "freeFrom": "2026-11-06", "freeCapacityT": 3.5 }
+  ]
+}

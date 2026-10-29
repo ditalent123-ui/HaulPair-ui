@@ -1,0 +1,1020 @@
+{
+  "schemaVersion": 1,
+  "description": "Agricultural cargo catalog (MVP). Non-hazardous cargo only. Values marked unverified_general_knowledge or unknown must be confirmed before operational use.",
+  "categories": {
+    "grain_oilseed": {
+      "lt": "Grūdai ir aliejinės kultūros",
+      "en": "Grains and oilseeds"
+    },
+    "vegetable": {
+      "lt": "Daržovės",
+      "en": "Vegetables"
+    },
+    "other_agricultural": {
+      "lt": "Kiti žemės ūkio kroviniai",
+      "en": "Other agricultural cargo"
+    }
+  },
+  "packagingTypes": {
+    "bulk": {
+      "lt": "Birus",
+      "en": "Bulk",
+      "closed": false
+    },
+    "palletized": {
+      "lt": "Ant padėklų",
+      "en": "Palletized",
+      "closed": true
+    },
+    "bagged": {
+      "lt": "Maišuose",
+      "en": "Bagged",
+      "closed": true
+    },
+    "boxed": {
+      "lt": "Dėžėse",
+      "en": "Boxed",
+      "closed": true
+    },
+    "baled": {
+      "lt": "Ryšuliuose",
+      "en": "Baled",
+      "closed": false
+    },
+    "other_specialized": {
+      "lt": "Kita specializuota",
+      "en": "Other specialized",
+      "closed": false
+    }
+  },
+  "cargoTypes": [
+    {
+      "id": "wheat",
+      "names": {
+        "lt": "Kviečiai",
+        "en": "Wheat"
+      },
+      "category": "grain_oilseed",
+      "transportOptions": [
+        {
+          "packaging": "bulk",
+          "trailerCategories": [
+            "agricultural_tipper"
+          ]
+        },
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "not_required",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unverified_general_knowledge",
+        "note": "No temperature control is normally specified; protect from moisture and condensation."
+      },
+      "hygiene": {
+        "group": "raw_grain_oilseed",
+        "requiresCleanBody": true,
+        "notes": "Body must be clean, dry and free of residues of previous loads. Feed/food previous-cargo rules (e.g. GMP+ or national schemes) may apply — verify with the shipper.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": {
+        "minTPerM3": 0.72,
+        "maxTPerM3": 0.83,
+        "confidence": "official_source_search_extract",
+        "sources": [
+          {
+            "id": "fao_s4314e_appendix_xi",
+            "title": "FAO, Appendix XI (bulk densities)",
+            "url": "https://www.fao.org/4/s4314e/s4314e0q.htm",
+            "accessNote": "Seen via search-engine extract only."
+          },
+          {
+            "id": "fao_density_db_v2",
+            "title": "FAO/INFOODS Density Database v2.0",
+            "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/density_DB_v2_0_01.pdf",
+            "accessNote": "Seen via search-engine extract only; the PDF could not be opened from the build environment."
+          }
+        ]
+      },
+      "specialConditions": [
+        "keep_dry",
+        "cover_load"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": [
+        {
+          "id": "cargobull_ski_light_agri",
+          "title": "Schmitz Cargobull S.KI LIGHT – agriculture",
+          "url": "https://www.cargobull.com/en/use/agriculture-s-ki-light",
+          "accessNote": "Lists cereals, corn, sugar beet and potatoes as intended loads (search-engine extract)."
+        }
+      ]
+    },
+    {
+      "id": "barley",
+      "names": {
+        "lt": "Miežiai",
+        "en": "Barley"
+      },
+      "category": "grain_oilseed",
+      "transportOptions": [
+        {
+          "packaging": "bulk",
+          "trailerCategories": [
+            "agricultural_tipper"
+          ]
+        },
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "not_required",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unverified_general_knowledge",
+        "note": "No temperature control is normally specified; protect from moisture and condensation."
+      },
+      "hygiene": {
+        "group": "raw_grain_oilseed",
+        "requiresCleanBody": true,
+        "notes": "Body must be clean, dry and free of residues of previous loads. Feed/food previous-cargo rules (e.g. GMP+ or national schemes) may apply — verify with the shipper.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": {
+        "minTPerM3": 0.61,
+        "maxTPerM3": 0.69,
+        "confidence": "official_source_search_extract",
+        "sources": [
+          {
+            "id": "fao_density_db_v2",
+            "title": "FAO/INFOODS Density Database v2.0",
+            "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/density_DB_v2_0_01.pdf",
+            "accessNote": "Seen via search-engine extract only; the PDF could not be opened from the build environment."
+          }
+        ]
+      },
+      "specialConditions": [
+        "keep_dry",
+        "cover_load"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": [
+        {
+          "id": "cargobull_ski_light_agri",
+          "title": "Schmitz Cargobull S.KI LIGHT – agriculture",
+          "url": "https://www.cargobull.com/en/use/agriculture-s-ki-light",
+          "accessNote": "Lists cereals, corn, sugar beet and potatoes as intended loads (search-engine extract)."
+        }
+      ]
+    },
+    {
+      "id": "oats",
+      "names": {
+        "lt": "Avižos",
+        "en": "Oats"
+      },
+      "category": "grain_oilseed",
+      "transportOptions": [
+        {
+          "packaging": "bulk",
+          "trailerCategories": [
+            "agricultural_tipper"
+          ]
+        },
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "not_required",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unverified_general_knowledge",
+        "note": "No temperature control is normally specified; protect from moisture and condensation."
+      },
+      "hygiene": {
+        "group": "raw_grain_oilseed",
+        "requiresCleanBody": true,
+        "notes": "Body must be clean, dry and free of residues of previous loads. Feed/food previous-cargo rules (e.g. GMP+ or national schemes) may apply — verify with the shipper.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": {
+        "minTPerM3": 0.41,
+        "maxTPerM3": 0.43,
+        "confidence": "official_source_search_extract",
+        "sources": [
+          {
+            "id": "fao_density_db_v2",
+            "title": "FAO/INFOODS Density Database v2.0",
+            "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/density_DB_v2_0_01.pdf",
+            "accessNote": "Seen via search-engine extract only; the PDF could not be opened from the build environment."
+          }
+        ]
+      },
+      "specialConditions": [
+        "keep_dry",
+        "cover_load",
+        "low_density_volume_limited"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": [
+        {
+          "id": "cargobull_ski_light_agri",
+          "title": "Schmitz Cargobull S.KI LIGHT – agriculture",
+          "url": "https://www.cargobull.com/en/use/agriculture-s-ki-light",
+          "accessNote": "Lists cereals, corn, sugar beet and potatoes as intended loads (search-engine extract)."
+        }
+      ]
+    },
+    {
+      "id": "rye",
+      "names": {
+        "lt": "Rugiai",
+        "en": "Rye"
+      },
+      "category": "grain_oilseed",
+      "transportOptions": [
+        {
+          "packaging": "bulk",
+          "trailerCategories": [
+            "agricultural_tipper"
+          ]
+        },
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "not_required",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unverified_general_knowledge",
+        "note": "No temperature control is normally specified; protect from moisture and condensation."
+      },
+      "hygiene": {
+        "group": "raw_grain_oilseed",
+        "requiresCleanBody": true,
+        "notes": "Body must be clean, dry and free of residues of previous loads. Feed/food previous-cargo rules (e.g. GMP+ or national schemes) may apply — verify with the shipper.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": {
+        "minTPerM3": 0.72,
+        "maxTPerM3": 0.72,
+        "confidence": "official_source_search_extract",
+        "sources": [
+          {
+            "id": "fao_density_db_v1",
+            "title": "FAO/INFOODS Density Database v1.0",
+            "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/upload/Density_databse_v1_final.pdf",
+            "accessNote": "Seen via search-engine extract only."
+          }
+        ]
+      },
+      "specialConditions": [
+        "keep_dry",
+        "cover_load"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": [
+        {
+          "id": "cargobull_ski_light_agri",
+          "title": "Schmitz Cargobull S.KI LIGHT – agriculture",
+          "url": "https://www.cargobull.com/en/use/agriculture-s-ki-light",
+          "accessNote": "Lists cereals, corn, sugar beet and potatoes as intended loads (search-engine extract)."
+        }
+      ]
+    },
+    {
+      "id": "corn",
+      "names": {
+        "lt": "Kukurūzai",
+        "en": "Corn (maize)"
+      },
+      "category": "grain_oilseed",
+      "transportOptions": [
+        {
+          "packaging": "bulk",
+          "trailerCategories": [
+            "agricultural_tipper"
+          ]
+        },
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "not_required",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unverified_general_knowledge",
+        "note": "No temperature control is normally specified; protect from moisture and condensation."
+      },
+      "hygiene": {
+        "group": "raw_grain_oilseed",
+        "requiresCleanBody": true,
+        "notes": "Body must be clean, dry and free of residues of previous loads. Feed/food previous-cargo rules (e.g. GMP+ or national schemes) may apply — verify with the shipper.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": {
+        "minTPerM3": 0.72,
+        "maxTPerM3": 0.72,
+        "confidence": "official_source_search_extract",
+        "sources": [
+          {
+            "id": "fao_density_db_v2",
+            "title": "FAO/INFOODS Density Database v2.0",
+            "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/density_DB_v2_0_01.pdf",
+            "accessNote": "Seen via search-engine extract only; the PDF could not be opened from the build environment."
+          }
+        ]
+      },
+      "specialConditions": [
+        "keep_dry",
+        "cover_load"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": [
+        {
+          "id": "cargobull_ski_light_agri",
+          "title": "Schmitz Cargobull S.KI LIGHT – agriculture",
+          "url": "https://www.cargobull.com/en/use/agriculture-s-ki-light",
+          "accessNote": "Lists cereals, corn, sugar beet and potatoes as intended loads (search-engine extract)."
+        }
+      ],
+      "notes": "Shelled, dried grain."
+    },
+    {
+      "id": "rapeseed",
+      "names": {
+        "lt": "Rapsai",
+        "en": "Rapeseed"
+      },
+      "category": "grain_oilseed",
+      "transportOptions": [
+        {
+          "packaging": "bulk",
+          "trailerCategories": [
+            "agricultural_tipper"
+          ]
+        },
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "not_required",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unverified_general_knowledge",
+        "note": "No temperature control is normally specified; protect from moisture and condensation."
+      },
+      "hygiene": {
+        "group": "raw_grain_oilseed",
+        "requiresCleanBody": true,
+        "notes": "Body must be clean, dry and free of residues of previous loads. Feed/food previous-cargo rules (e.g. GMP+ or national schemes) may apply — verify with the shipper.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": {
+        "minTPerM3": null,
+        "maxTPerM3": null,
+        "confidence": "unknown",
+        "sources": [],
+        "note": "No authoritative bulk density found (FAO lists only rapeseed oil). Enter a measured value."
+      },
+      "specialConditions": [
+        "keep_dry",
+        "cover_load"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": [
+        {
+          "id": "cargobull_ski_light_agri",
+          "title": "Schmitz Cargobull S.KI LIGHT – agriculture",
+          "url": "https://www.cargobull.com/en/use/agriculture-s-ki-light",
+          "accessNote": "Lists cereals, corn, sugar beet and potatoes as intended loads (search-engine extract)."
+        }
+      ]
+    },
+    {
+      "id": "potatoes",
+      "names": {
+        "lt": "Bulvės",
+        "en": "Potatoes"
+      },
+      "category": "vegetable",
+      "transportOptions": [
+        {
+          "packaging": "bulk",
+          "trailerCategories": [
+            "agricultural_tipper"
+          ]
+        },
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "palletized",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "boxed",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "unknown",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unknown",
+        "note": "Temperature and ventilation needs depend on season, storage history and product condition (frost and heat damage risk). Not specified in this catalog — confirm with the shipper."
+      },
+      "hygiene": {
+        "group": "fresh_produce",
+        "requiresCleanBody": true,
+        "notes": "Fresh food product. Avoid contamination from soil-, chemical- or odour-emitting loads.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": null,
+      "specialConditions": [
+        "temperature_sensitive",
+        "ventilation_may_be_required"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": [
+        {
+          "id": "cargobull_ski_light_agri",
+          "title": "Schmitz Cargobull S.KI LIGHT – agriculture",
+          "url": "https://www.cargobull.com/en/use/agriculture-s-ki-light",
+          "accessNote": "Lists cereals, corn, sugar beet and potatoes as intended loads (search-engine extract)."
+        }
+      ]
+    },
+    {
+      "id": "carrots",
+      "names": {
+        "lt": "Morkos",
+        "en": "Carrots"
+      },
+      "category": "vegetable",
+      "transportOptions": [
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "palletized",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "boxed",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "unknown",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unknown",
+        "note": "Temperature and ventilation needs depend on season, storage history and product condition (frost and heat damage risk). Not specified in this catalog — confirm with the shipper."
+      },
+      "hygiene": {
+        "group": "fresh_produce",
+        "requiresCleanBody": true,
+        "notes": "Fresh food product. Avoid contamination from soil-, chemical- or odour-emitting loads.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": null,
+      "specialConditions": [
+        "temperature_sensitive",
+        "ventilation_may_be_required"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": []
+    },
+    {
+      "id": "onions",
+      "names": {
+        "lt": "Svogūnai",
+        "en": "Onions"
+      },
+      "category": "vegetable",
+      "transportOptions": [
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "palletized",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "boxed",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "unknown",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unknown",
+        "note": "Temperature and ventilation needs depend on season, storage history and product condition (frost and heat damage risk). Not specified in this catalog — confirm with the shipper."
+      },
+      "hygiene": {
+        "group": "fresh_produce",
+        "requiresCleanBody": true,
+        "notes": "Fresh food product. Avoid contamination from soil-, chemical- or odour-emitting loads.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": null,
+      "specialConditions": [
+        "temperature_sensitive",
+        "ventilation_may_be_required"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": []
+    },
+    {
+      "id": "cabbage",
+      "names": {
+        "lt": "Kopūstai",
+        "en": "Cabbage"
+      },
+      "category": "vegetable",
+      "transportOptions": [
+        {
+          "packaging": "palletized",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "boxed",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "unknown",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unknown",
+        "note": "Temperature and ventilation needs depend on season, storage history and product condition (frost and heat damage risk). Not specified in this catalog — confirm with the shipper."
+      },
+      "hygiene": {
+        "group": "fresh_produce",
+        "requiresCleanBody": true,
+        "notes": "Fresh food product. Avoid contamination from soil-, chemical- or odour-emitting loads.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": null,
+      "specialConditions": [
+        "temperature_sensitive",
+        "ventilation_may_be_required"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": []
+    },
+    {
+      "id": "beetroot",
+      "names": {
+        "lt": "Burokėliai",
+        "en": "Beetroot"
+      },
+      "category": "vegetable",
+      "transportOptions": [
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "palletized",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "boxed",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "unknown",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unknown",
+        "note": "Temperature and ventilation needs depend on season, storage history and product condition (frost and heat damage risk). Not specified in this catalog — confirm with the shipper."
+      },
+      "hygiene": {
+        "group": "fresh_produce",
+        "requiresCleanBody": true,
+        "notes": "Fresh food product. Avoid contamination from soil-, chemical- or odour-emitting loads.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": null,
+      "specialConditions": [
+        "temperature_sensitive",
+        "ventilation_may_be_required"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": [],
+      "notes": "Table beetroot. Bulk sugar beet is a different product and is not included yet."
+    },
+    {
+      "id": "packaged_animal_feed",
+      "names": {
+        "lt": "Fasuoti pašarai",
+        "en": "Packaged animal feed"
+      },
+      "category": "other_agricultural",
+      "transportOptions": [
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        },
+        {
+          "packaging": "palletized",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "not_required",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unverified_general_knowledge",
+        "note": "Dry, packaged product; keep dry."
+      },
+      "hygiene": {
+        "group": "animal_feed",
+        "requiresCleanBody": true,
+        "notes": "Feed safety: avoid contamination with chemicals, treated seed or non-food residues.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": null,
+      "specialConditions": [
+        "keep_dry"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": []
+    },
+    {
+      "id": "agricultural_seeds",
+      "names": {
+        "lt": "Žemės ūkio sėklos",
+        "en": "Agricultural seeds"
+      },
+      "category": "other_agricultural",
+      "transportOptions": [
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        },
+        {
+          "packaging": "palletized",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        },
+        {
+          "packaging": "boxed",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "unknown",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unknown",
+        "note": "Storage and transport conditions are seed-specific; confirm with the supplier."
+      },
+      "hygiene": {
+        "group": "planting_seed",
+        "requiresCleanBody": true,
+        "notes": "Seed for sowing may be chemically treated. Treat as a contamination risk for food and feed until the shipper confirms otherwise.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": null,
+      "specialConditions": [
+        "possibly_chemically_treated",
+        "keep_dry"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": []
+    },
+    {
+      "id": "hay",
+      "names": {
+        "lt": "Šienas",
+        "en": "Hay"
+      },
+      "category": "other_agricultural",
+      "transportOptions": [
+        {
+          "packaging": "baled",
+          "trailerCategories": [
+            "flatbed",
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "not_required",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unverified_general_knowledge",
+        "note": "No temperature control. Keep dry; damp hay can self-heat."
+      },
+      "hygiene": {
+        "group": "forage",
+        "requiresCleanBody": false,
+        "notes": "Dust and plant debris; feed material.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": null,
+      "specialConditions": [
+        "fire_risk",
+        "dust",
+        "secure_bales",
+        "keep_dry"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": []
+    },
+    {
+      "id": "straw",
+      "names": {
+        "lt": "Šiaudai",
+        "en": "Straw"
+      },
+      "category": "other_agricultural",
+      "transportOptions": [
+        {
+          "packaging": "baled",
+          "trailerCategories": [
+            "flatbed",
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "not_required",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unverified_general_knowledge",
+        "note": "No temperature control. Keep dry."
+      },
+      "hygiene": {
+        "group": "straw_bedding",
+        "requiresCleanBody": false,
+        "notes": "Dust and plant debris.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": null,
+      "specialConditions": [
+        "fire_risk",
+        "dust",
+        "secure_bales"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": []
+    },
+    {
+      "id": "packaged_agricultural_products",
+      "names": {
+        "lt": "Fasuoti žemės ūkio produktai",
+        "en": "Packaged agricultural products"
+      },
+      "category": "other_agricultural",
+      "transportOptions": [
+        {
+          "packaging": "palletized",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "boxed",
+          "trailerCategories": [
+            "curtainsider",
+            "refrigerated"
+          ]
+        },
+        {
+          "packaging": "bagged",
+          "trailerCategories": [
+            "curtainsider"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "unknown",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unknown",
+        "note": "Generic category: requirements depend on the specific product."
+      },
+      "hygiene": {
+        "group": "unspecified",
+        "requiresCleanBody": true,
+        "notes": "Generic category: hygiene requirements depend on the specific product.",
+        "confidence": "unknown"
+      },
+      "bulkDensity": null,
+      "specialConditions": [],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unknown",
+      "sources": []
+    },
+    {
+      "id": "agricultural_machinery_components",
+      "names": {
+        "lt": "Žemės ūkio technikos dalys",
+        "en": "Agricultural machinery components"
+      },
+      "category": "other_agricultural",
+      "transportOptions": [
+        {
+          "packaging": "palletized",
+          "trailerCategories": [
+            "curtainsider",
+            "flatbed"
+          ]
+        },
+        {
+          "packaging": "boxed",
+          "trailerCategories": [
+            "curtainsider",
+            "flatbed"
+          ]
+        },
+        {
+          "packaging": "other_specialized",
+          "trailerCategories": [
+            "flatbed"
+          ]
+        }
+      ],
+      "temperature": {
+        "status": "not_required",
+        "minC": null,
+        "maxC": null,
+        "confidence": "unverified_general_knowledge",
+        "note": "No temperature control."
+      },
+      "hygiene": {
+        "group": "non_food_industrial",
+        "requiresCleanBody": false,
+        "notes": "May carry oil or grease residues — contamination risk for food and feed.",
+        "confidence": "unverified_general_knowledge"
+      },
+      "bulkDensity": null,
+      "specialConditions": [
+        "load_securing",
+        "possible_oil_residue"
+      ],
+      "compatibilityRestrictions": {
+        "noBulkMixing": true
+      },
+      "hazardous": false,
+      "dataConfidence": "unverified_general_knowledge",
+      "sources": []
+    }
+  ]
+}

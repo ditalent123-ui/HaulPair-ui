@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "description": "Cargo types offered in the HaulPair booking flow. planningDensityTPerM3 is an EDITABLE PLANNING ASSUMPTION used only for the truck volume check; real bulk density varies with moisture, variety and handling. Where the logistics catalog (data/logistics/cargo-types.json) has a sourced density range, the planning value lies inside it.",
+  "seedData": true,
+  "cargoTypes": [
+    { "id": "wheat",      "label": { "lt": "Kviečiai", "en": "Wheat" },      "group": "grain",      "planningDensityTPerM3": 0.75, "densityBasis": "inside FAO range 0.72–0.83 t/m³ (see logistics catalog)" },
+    { "id": "barley",     "label": { "lt": "Miežiai", "en": "Barley" },      "group": "grain",      "planningDensityTPerM3": 0.65, "densityBasis": "inside FAO range 0.61–0.69 t/m³" },
+    { "id": "rapeseed",   "label": { "lt": "Rapsai", "en": "Rapeseed" },     "group": "oilseed",    "planningDensityTPerM3": 0.65, "densityBasis": "planning assumption only — no authoritative source in the catalog" },
+    { "id": "oats",       "label": { "lt": "Avižos", "en": "Oats" },         "group": "grain",      "planningDensityTPerM3": 0.42, "densityBasis": "inside FAO range 0.41–0.43 t/m³" },
+    { "id": "rye",        "label": { "lt": "Rugiai", "en": "Rye" },          "group": "grain",      "planningDensityTPerM3": 0.72, "densityBasis": "FAO 0.72 t/m³" },
+    { "id": "corn",       "label": { "lt": "Kukurūzai", "en": "Corn" },      "group": "grain",      "planningDensityTPerM3": 0.72, "densityBasis": "FAO 0.72 t/m³ (shelled, dried)" },
+    { "id": "potatoes",   "label": { "lt": "Bulvės", "en": "Potatoes" },     "group": "vegetable",  "planningDensityTPerM3": 0.65, "densityBasis": "planning assumption only (loose bulk)" },
+    { "id": "fertiliser", "label": { "lt": "Trąšos", "en": "Fertiliser" },   "group": "fertiliser", "planningDensityTPerM3": 1.0,  "densityBasis": "planning assumption only (granular mineral fertiliser)" }
+  ]
+}

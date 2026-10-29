@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "description": "Offline fallback place list for the location search, used ONLY when the configured geocoder cannot be reached. Coordinates are approximate town-centre points (demo search). Results from this list are labelled as demo in the UI.",
+  "places": [
+    ["Vilnius", 54.6872, 25.2797], ["Kaunas", 54.8985, 23.9036], ["Klaipėda", 55.7033, 21.1443], ["Šiauliai", 55.9349, 23.3137],
+    ["Panevėžys", 55.7348, 24.3575], ["Alytus", 54.3963, 24.0459], ["Marijampolė", 54.5599, 23.3541], ["Utena", 55.4977, 25.5992],
+    ["Kėdainiai", 55.2883, 23.9747], ["Telšiai", 55.9814, 22.2472], ["Tauragė", 55.2522, 22.2897], ["Ukmergė", 55.2453, 24.7761],
+    ["Jonava", 55.0727, 24.2797], ["Biržai", 56.2008, 24.7561], ["Pasvalys", 56.0611, 24.4036], ["Joniškis", 56.2379, 23.6142],
+    ["Raseiniai", 55.3797, 23.1239], ["Radviliškis", 55.8158, 23.5461], ["Rokiškis", 55.9616, 25.5807], ["Kupiškis", 55.8402, 24.9763],
+    ["Pakruojis", 55.9783, 23.8633], ["Kelmė", 55.6297, 22.9333], ["Mažeikiai", 56.3109, 22.3418], ["Plungė", 55.9111, 21.8456],
+    ["Šilutė", 55.3489, 21.4825], ["Jurbarkas", 55.0772, 22.7647], ["Vilkaviškis", 54.6517, 23.0353], ["Prienai", 54.6333, 23.9481],
+    ["Anykščiai", 55.5254, 25.1026], ["Molėtai", 55.2265, 25.4182], ["Zarasai", 55.7310, 26.2464], ["Ignalina", 55.3406, 26.1606],
+    ["Varėna", 54.2208, 24.5764], ["Lazdijai", 54.2343, 23.5157], ["Kaišiadorys", 54.8667, 24.4500], ["Šakiai", 54.9531, 23.0478],
+    ["Kretinga", 55.8889, 21.2425], ["Skuodas", 56.2667, 21.5333], ["Naujoji Akmenė", 56.3167, 22.9000], ["Kalvarija", 54.4147, 23.2253],
+    ["Kazlų Rūda", 54.7489, 23.4900], ["Širvintos", 55.0436, 24.9567], ["Šalčininkai", 54.3092, 25.3878], ["Trakai", 54.6378, 24.9342],
+    ["Elektrėnai", 54.7856, 24.6614], ["Švenčionys", 55.1333, 26.1597], ["Rietavas", 55.7250, 21.9306], ["Šilalė", 55.4917, 22.1867],
+    ["Pagėgiai", 55.1356, 21.9128], ["Druskininkai", 54.0154, 23.9733], ["Visaginas", 55.5944, 26.4319], ["Birštonas", 54.6056, 24.0306]
+  ]
+}

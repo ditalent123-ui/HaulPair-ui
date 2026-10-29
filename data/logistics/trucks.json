@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "description": "Truck tractor models. Reference consumption figures are comparative test results under specific conditions, NOT expected real-world consumption for agricultural haulage. Use estimatedConsumption (a configurable demo assumption) for calculations unless the user overrides it.",
+  "defaults": {
+    "estimatedConsumptionLPer100Km": 30,
+    "estimatedConsumptionConfidence": "demo_assumption",
+    "estimatedConsumptionNote": "Demonstration assumption for loaded agricultural haulage. Real consumption depends on cargo weight, configuration, road, speed, terrain, weather, driver behaviour and number of stops. Override with your own fleet data."
+  },
+  "referenceTests": {
+    "green_truck_2025": {
+      "name": "Green Truck 2025 (VerkehrsRundschau / Trucker)",
+      "publishedAt": "2025-03",
+      "route": "343 km loop of motorways and country roads in southern Germany (Bavaria)",
+      "routeConfidence": "official_source_search_extract",
+      "grossCombinationWeightKg": 32000,
+      "grossCombinationWeightConfidence": "third_party_source",
+      "notes": "Test combinations run at about 32 t GCW (not 40 t), with a 3-axle trailer. Ranking also considers AdBlue use, average speed and tractor unladen weight. Table values were seen in search-engine extracts; the Scania and DAF AdBlue and speed columns are tentative.",
+      "sources": [
+        { "id": "verkehrsrundschau_green_truck_2025", "title": "VerkehrsRundschau: Green Truck 2025 – Volvo Trucks holt sich die Trophäe", "url": "https://www.verkehrsrundschau.de/nachrichten/transport-logistik/green-truck-2025-volvo-trucks-holt-sich-die-trophaee-3633525", "accessNote": "Search-engine extract only." },
+        { "id": "volvo_brochure_green_truck_2025", "title": "Volvo Trucks: Green Truck VerkehrsRundschau 2025 test report (page 4 table)", "url": "https://brochures.volvotrucks.com/de/volvo-trucks/testberichte/2025/green-truck-verkehrsrundschau-2025-06/?page=4", "accessNote": "Search-engine extract only; table text was jumbled in the extract." },
+        { "id": "volvo_lt_press_2025", "title": "Volvo Trucks Lietuva press release: Volvo FH Aero wins the 2025 Green Truck", "url": "https://www.volvotrucks.lt/lt-lt/news/press-releases/2025/mar/volvo-fh-aero-wins-the-2025-green-truck.html", "accessNote": "Provided by the project team; not opened from the build environment." },
+        { "id": "fleetequipmentmag_green_truck", "title": "Fleet Equipment: Green Truck test background (32 t GCW)", "url": "https://www.fleetequipmentmag.com/?p=179602", "accessNote": "Third-party source." }
+      ]
+    }
+  },
+  "tractors": [
+    {
+      "id": "volvo_fh_aero_420_isave",
+      "manufacturer": "Volvo",
+      "model": "FH Aero 420 I-Save",
+      "engine": { "description": "D13, 420 hp, I-Save", "confidence": "third_party_source" },
+      "fuelType": "diesel",
+      "unladenWeightKg": { "value": 7152, "confidence": "official_source_search_extract", "note": "Test vehicle as weighed in Green Truck 2025." },
+      "referenceConsumption": {
+        "valueLPer100Km": 21.20,
+        "adBlueLPer100Km": 1.28,
+        "averageSpeedKmh": 80.14,
+        "testId": "green_truck_2025",
+        "confidence": "official_source_search_extract"
+      },
+      "estimatedConsumptionLPer100Km": null,
+      "dataConfidence": "official_source_search_extract",
+      "sourceIds": ["verkehrsrundschau_green_truck_2025", "volvo_brochure_green_truck_2025", "volvo_lt_press_2025", "fleetequipmentmag_green_truck"]
+    },
+    {
+      "id": "scania_420_r_super",
+      "manufacturer": "Scania",
+      "model": "420 R Super",
+      "engine": { "description": null, "confidence": "unknown", "note": "Engine variant used in the test not confirmed." },
+      "fuelType": "diesel",
+      "unladenWeightKg": { "value": null, "confidence": "unknown" },
+      "referenceConsumption": {
+        "valueLPer100Km": 21.50,
+        "adBlueLPer100Km": 2.31,
+        "averageSpeedKmh": 80.18,
+        "testId": "green_truck_2025",
+        "confidence": "official_source_search_extract",
+        "note": "AdBlue and speed values are tentative (column attribution uncertain in the extract)."
+      },
+      "estimatedConsumptionLPer100Km": null,
+      "dataConfidence": "official_source_search_extract",
+      "sourceIds": ["volvo_brochure_green_truck_2025"]
+    },
+    {
+      "id": "daf_xf_430",
+      "manufacturer": "DAF",
+      "model": "XF 430",
+      "engine": { "description": null, "confidence": "unknown", "note": "MX-11 vs MX-13 not confirmed." },
+      "fuelType": "diesel",
+      "unladenWeightKg": { "value": null, "confidence": "unknown" },
+      "referenceConsumption": {
+        "valueLPer100Km": 21.59,
+        "adBlueLPer100Km": 0.98,
+        "averageSpeedKmh": 79.79,
+        "testId": "green_truck_2025",
+        "confidence": "official_source_search_extract",
+        "note": "AdBlue and speed values are tentative (column attribution uncertain in the extract)."
+      },
+      "estimatedConsumptionLPer100Km": null,
+      "dataConfidence": "official_source_search_extract",
+      "sourceIds": ["volvo_brochure_green_truck_2025"]
+    }
+  ]
+}

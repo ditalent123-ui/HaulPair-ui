@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>HaulPair — grūdų pervežimai (demo)</title>
+  <meta name="description" content="HaulPair: užsisakykite žemės ūkio krovinio pervežimą Lietuvoje. Demonstracinė versija.">
+  <meta name="theme-color" content="#101d2b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/user.css">
+  <script type="module" src="js/user/main.js"></script>
+</head>
+<body class="hp-body">
+  <a class="skip-link" href="#hpMain">Pereiti prie turinio</a>
+  <div class="hp-app">
+    <header class="hp-header">
+      <a class="hp-brand" href="#/" aria-label="HaulPair pradžia">
+        <img src="assets/logo.svg" alt="" width="30" height="30">
+        <span class="hp-brand-name">HaulPair</span>
+      </a>
+      <span class="hp-demo-badge" title="Demonstracinė versija: duomenys ir užsakymai netikri">DEMO</span>
+      <nav class="hp-header-nav" id="hpHeaderNav" aria-label="Pagrindinis meniu"></nav>
+      <div class="hp-account" id="hpAccount" hidden>
+        <span class="hp-account-text">
+          <span class="hp-account-name" id="hpAccountName"></span>
+          <span class="hp-account-role" id="hpAccountRole"></span>
+        </span>
+        <button type="button" class="hp-icon-btn" id="hpLogout" aria-label="Atsijungti" title="Atsijungti"></button>
+      </div>
+    </header>
+    <main class="hp-main" id="hpMain" tabindex="-1"></main>
+    <nav class="hp-bottom-nav" id="hpBottomNav" aria-label="Pagrindinis meniu"></nav>
+  </div>
+  <div class="toast-region hp-toast-region" id="toastRegion" aria-live="polite"></div>
+  <noscript><p class="hp-noscript">HaulPair veikia tik įjungus JavaScript.</p></noscript>
+</body>
+</html>

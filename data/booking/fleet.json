@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "description": "HaulPair truck fleet profiles used for automatic truck selection, truck routing restrictions and pricing. ALL FIGURES ARE EDITABLE SEED DATA (planning assumptions for typical EU/Lithuanian agricultural haulage vehicles), not manufacturer specifications or permits. Replace them with your own fleet data. Profiles contain no driver costs of any kind.",
+  "seedData": true,
+  "profiles": [
+    {
+      "id": "small_tipper",
+      "label": { "lt": "Mažas savivartis", "en": "Small tipper" },
+      "classLabel": { "lt": "iki 7,5 t", "en": "up to 7.5 t" },
+      "payloadT": 3.5,
+      "cargoVolumeM3": 6,
+      "grossWeightT": 7.5,
+      "heightM": 3.2,
+      "widthM": 2.4,
+      "lengthM": 7.0,
+      "axleLoadT": 5.0,
+      "fuelLPer100Km": { "empty": 15, "full": 19 },
+      "vehicleCostEurPerKm": 0.06,
+      "vehicleTimeCostEurPerHour": 6,
+      "tollEurPerKm": 0,
+      "demoPlates": ["DEM 101", "DEM 102"]
+    },
+    {
+      "id": "rigid_14t",
+      "label": { "lt": "Savivartis", "en": "Rigid tipper" },
+      "classLabel": { "lt": "14 t klasė", "en": "14 t class" },
+      "payloadT": 7,
+      "cargoVolumeM3": 11,
+      "grossWeightT": 14,
+      "heightM": 3.4,
+      "widthM": 2.55,
+      "lengthM": 8.5,
+      "axleLoadT": 9.0,
+      "fuelLPer100Km": { "empty": 19, "full": 25 },
+      "vehicleCostEurPerKm": 0.08,
+      "vehicleTimeCostEurPerHour": 9,
+      "tollEurPerKm": 0.03,
+      "demoPlates": ["DEM 201", "DEM 202"]
+    },
+    {
+      "id": "grain_24t",
+      "label": { "lt": "Grūdovežis", "en": "Grain truck" },
+      "classLabel": { "lt": "24 t klasė", "en": "24 t class" },
+      "payloadT": 15,
+      "cargoVolumeM3": 22,
+      "grossWeightT": 26,
+      "heightM": 3.6,
+      "widthM": 2.55,
+      "lengthM": 10.0,
+      "axleLoadT": 10.0,
+      "fuelLPer100Km": { "empty": 23, "full": 31 },
+      "vehicleCostEurPerKm": 0.10,
+      "vehicleTimeCostEurPerHour": 12,
+      "tollEurPerKm": 0.04,
+      "demoPlates": ["DEM 301", "DEM 302", "DEM 303"]
+    },
+    {
+      "id": "combination_40t",
+      "label": { "lt": "Vilkikas su grūdų puspriekabe", "en": "Tractor with grain semi-trailer" },
+      "classLabel": { "lt": "40 t junginys", "en": "40 t combination" },
+      "payloadT": 26,
+      "cargoVolumeM3": 58,
+      "grossWeightT": 40,
+      "heightM": 4.0,
+      "widthM": 2.55,
+      "lengthM": 16.5,
+      "axleLoadT": 11.5,
+      "fuelLPer100Km": { "empty": 25, "full": 34 },
+      "vehicleCostEurPerKm": 0.12,
+      "vehicleTimeCostEurPerHour": 15,
+      "tollEurPerKm": 0.05,
+      "demoPlates": ["DEM 401", "DEM 402", "DEM 403", "DEM 404"]
+    }
+  ],
+  "notes": [
+    "Profiles are ordered from smallest to largest; selection picks the smallest profile whose weight AND volume capacity fit the load.",
+    "Gross weight 40 t is the general EU/Lithuanian limit for a 5-axle combination; heavier combinations need special permits and are not seeded.",
+    "vehicleTimeCostEurPerHour is the truck's own time cost (financing, insurance, depreciation while in use). It contains no driver wages, per diem or accommodation.",
+    "tollEurPerKm is a placeholder for the Lithuanian road-user charge for heavy goods vehicles; verify current rules and rates before relying on it."
+  ]
+}

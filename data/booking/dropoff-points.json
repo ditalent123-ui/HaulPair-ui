@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "description": "Drop-off points in Lithuania for the booking destination dropdown and the price planner. Company names and street addresses were checked against public company directories and registers (sources per entry, checked 2026-10-29). Coordinates could NOT be verified from the build environment (no geocoder access), so they are approximate and every entry is marked demo=true and shown with a visible DEMO label until an administrator verifies the coordinates. 'accepts' is a planning assumption, not a confirmed intake list. Do not treat any entry as an offer to buy or receive cargo.",
+  "checkedAt": "2026-10-29",
+  "types": {
+    "elevator": { "lt": "Elevatoriai ir sandėliai", "en": "Elevators and storage" },
+    "cooperative": { "lt": "Kooperatyvai", "en": "Cooperatives" },
+    "processing": { "lt": "Perdirbimo įmonės", "en": "Processing plants" },
+    "port": { "lt": "Uosto terminalai", "en": "Port terminals" }
+  },
+  "points": [
+    {
+      "id": "klasco_klaipeda", "type": "port", "region": "Klaipėdos apskr.",
+      "name": "KLASCO (Klaipėdos jūrų krovinių kompanija)", "address": "J. Zauerveino g. 18, Klaipėda",
+      "lat": 55.7180, "lon": 21.1090,
+      "accepts": ["wheat", "barley", "rapeseed", "oats", "rye", "corn", "fertiliser"],
+      "verification": { "name": "public_register", "address": "public_directory", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://scoris.eu/company/LT/140346267", "https://www.portseurope.com/klaipeda-port-begins-exporting-lithuanias-2025-grain-harvest/"]
+    },
+    {
+      "id": "bega_klaipeda", "type": "port", "region": "Klaipėdos apskr.",
+      "name": "Bega (Klaipėdos jūrų krovinių kompanija „Bega“)", "address": "Nemuno g. 42A, Klaipėda",
+      "lat": 55.6850, "lon": 21.1500,
+      "accepts": ["wheat", "barley", "rapeseed", "oats", "rye", "corn", "fertiliser"],
+      "verification": { "name": "public_source", "address": "unconfirmed_customs_list", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://bruks-siwertell.com/cases/bulk-terminal-lithuania", "https://vatzum.lrv.lt/public/canonical/1780396285/24993/2026_06_02.pdf"]
+    },
+    {
+      "id": "bkt_klaipeda", "type": "port", "region": "Klaipėdos apskr.",
+      "name": "Birių krovinių terminalas", "address": "Nemuno g. 163, Klaipėda",
+      "lat": 55.6600, "lon": 21.1600,
+      "accepts": ["fertiliser"],
+      "verification": { "name": "public_register", "address": "public_register", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://scoris.eu/company/LT/141544519"]
+    },
+    {
+      "id": "mestilla_klaipeda", "type": "processing", "region": "Klaipėdos apskr.",
+      "name": "Mestilla (rapsų perdirbimas)", "address": "Kretainio g. 5, Klaipėda",
+      "lat": 55.6880, "lon": 21.2180,
+      "accepts": ["rapeseed"],
+      "verification": { "name": "public_register", "address": "public_register", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://scoris.eu/company/LT/300097027", "https://www.fez.lt/construction-of-the-new-mestilla-plant-officially-began-in-klaipeda-free-zone/"]
+    },
+    {
+      "id": "kauno_grudai_central", "type": "processing", "region": "Kauno apskr.",
+      "name": "Kauno grūdai, centrinis elevatorius", "address": "H. ir O. Minkovskių g. 63, Kaunas",
+      "lat": 54.8800, "lon": 23.9550,
+      "accepts": ["wheat", "rye", "barley", "oats"],
+      "verification": { "name": "public_directory", "address": "public_directory", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://www.1551.lt/paieska/Kaunas/555/?p=576", "https://www.vle.lt/straipsnis/kauno-grudai/"]
+    },
+    {
+      "id": "kauno_grudai_aleksotas", "type": "elevator", "region": "Kauno apskr.",
+      "name": "Kauno grūdai, Aleksoto grūdų sandėliai", "address": "Veiverių g. 51, Kaunas",
+      "lat": 54.8720, "lon": 23.8880,
+      "accepts": ["wheat", "rye", "barley", "oats"],
+      "verification": { "name": "public_directory", "address": "public_directory", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://www.1551.lt/paieska/Kaunas/555/?p=576"]
+    },
+    {
+      "id": "linas_agro_kedainiai", "type": "elevator", "region": "Kauno apskr.",
+      "name": "Linas Agro Grūdų centrai, Kėdainiai", "address": "Biochemikų g. 6A, Kėdainiai",
+      "lat": 55.2960, "lon": 23.9990,
+      "accepts": ["wheat", "barley", "rapeseed", "oats", "rye", "corn"],
+      "verification": { "name": "public_source", "address": "job_listing", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://www.cvbankas.lt/sandelio-darbuotojas-a-kedainiuose/1-14090037"]
+    },
+    {
+      "id": "linas_agro_zemaitkiemis", "type": "elevator", "region": "Kauno apskr.",
+      "name": "Linas Agro Grūdų centrai, Žemaitkiemis", "address": "Ozo g. 5, Žemaitkiemis, Kauno r.",
+      "lat": 54.9700, "lon": 23.9500,
+      "accepts": ["wheat", "barley", "rapeseed", "oats", "rye", "corn"],
+      "verification": { "name": "public_source", "address": "job_listing", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://www.cvbankas.lt/sandelio-darbuotojas-a-kaune/1-14017692"]
+    },
+    {
+      "id": "linas_agro_joniskis", "type": "elevator", "region": "Šiaulių apskr.",
+      "name": "Linas Agro Grūdų centrai, Joniškio elevatorius", "address": "Vilniaus g. 62, Joniškis",
+      "lat": 56.2330, "lon": 23.6270,
+      "accepts": ["wheat", "barley", "rapeseed", "oats", "rye", "corn"],
+      "verification": { "name": "public_directory", "address": "public_directory", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://www.1551.lt/paieska/%C5%BEem%C4%97s/129/"]
+    },
+    {
+      "id": "linas_agro_siauliai", "type": "elevator", "region": "Šiaulių apskr.",
+      "name": "Linas Agro Grūdų centrai, Šiaulių elevatorius", "address": "Bačiūnų g. 156, Šiauliai",
+      "lat": 55.9510, "lon": 23.3740,
+      "accepts": ["wheat", "barley", "rapeseed", "oats", "rye", "corn"],
+      "verification": { "name": "public_directory", "address": "public_directory", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://www.1551.lt/paieska/%C5%BEem%C4%97s/129/"]
+    },
+    {
+      "id": "linas_agro_radviliskis", "type": "elevator", "region": "Šiaulių apskr.",
+      "name": "Linas Agro Grūdų centrai, Radviliškis", "address": "Dariaus ir Girėno g., Radviliškis",
+      "lat": 55.8100, "lon": 23.5400,
+      "accepts": ["wheat", "barley", "rapeseed", "oats", "rye", "corn"],
+      "verification": { "name": "public_source", "address": "job_listing_street_only", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://www.cvbankas.lt/laborantas-e-radviliskyje/1-14111826"]
+    },
+    {
+      "id": "zuk_linkuvos_krastas", "type": "cooperative", "region": "Šiaulių apskr.",
+      "name": "ŽŪK „Linkuvos kraštas“", "address": "Pramonės g. 11, Pakruojis",
+      "lat": 55.9760, "lon": 23.8730,
+      "accepts": ["wheat", "barley", "rapeseed"],
+      "verification": { "name": "public_directory", "address": "public_directory", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://www.1551.lt/zemes-ukio-produktai-apdorojimas-zemes-ukio-bendroves/"]
+    },
+    {
+      "id": "zuk_lit_koop", "type": "cooperative", "region": "Kauno apskr.",
+      "name": "ŽŪK „Lit-Koop“", "address": "Gėlių g. 2, Juodkaimiai, Kėdainių r.",
+      "lat": 55.3550, "lon": 23.8300,
+      "accepts": ["wheat", "barley", "rapeseed"],
+      "verification": { "name": "public_directory", "address": "public_directory", "coordinates": "approximate" }, "demo": true,
+      "sources": ["https://www.1551.lt/zemes-ukio-produktai-apdorojimas-zemes-ukio-bendroves/"]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "grain-transport-platform",
+  "version": "0.1.0",
+  "description": "Route planning and transport cost estimation foundation for Lithuanian grain haulage (local prototype).",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev": "node --watch-path=backend/src backend/src/server.js",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down",
+    "db:migrate": "node backend/src/database/migrate.js",
+    "db:migrate:test": "node backend/src/database/migrate.js --test",
+    "test": "node --test --test-concurrency=1 \"backend/tests/**/*.test.js\"",
+    "test:unit": "node --test \"backend/tests/unit/**/*.test.js\"",
+    "test:api": "node --test \"backend/tests/api/**/*.test.js\"",
+    "test:integration": "node --test --test-concurrency=1 \"backend/tests/integration/**/*.test.js\"",
+    "check": "node --check backend/src/server.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "leaflet": "^1.9.4",
+    "pg": "^8.23.1",
+    "pino": "^10.4.0",
+    "pino-http": "^11.0.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "pino-pretty": "^13.2.0",
+    "supertest": "^7.3.1"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.11"
+  }
+}

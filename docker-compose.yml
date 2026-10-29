@@ -1,0 +1,23 @@
+# Local PostgreSQL for development. Start with: docker compose up -d db
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: grain-transport-db
+    environment:
+      POSTGRES_USER: grain
+      POSTGRES_PASSWORD: grain_dev_password
+      POSTGRES_DB: grain_transport
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - grain_pgdata:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U grain -d grain_transport"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  grain_pgdata:
